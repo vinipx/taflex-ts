@@ -1,0 +1,63 @@
+image: mcr.microsoft.com/playwright:v1.45.0-jammy
+
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm ci
+  artifacts:
+    paths:
+      - node_modules/
+
+lint_and_build:
+  stage: test
+  script:
+    - npm run lint
+    - npm run build
+  dependencies:
+    - install_dependencies
+
+unit_tests:
+  stage: test
+  script:
+    - npm run test:unit
+  dependencies:
+    - install_dependencies
+
+integration_tests:
+  stage: test
+  script:
+    - npx playwright install --with-deps
+    - npm test
+  variables:
+    BASE_URL: https://the-internet.herokuapp.com
+    API_BASE_URL: https://jsonplaceholder.typicode.com
+  dependencies:
+    - install_dependencies
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+      - test-results/
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  script:
+    - cd docs
+    - npm install
+    - npm run build
+    - mv build ../public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
