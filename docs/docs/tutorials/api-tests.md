@@ -24,7 +24,7 @@ test.describe('Hybrid API Strategy (Playwright)', () => {
         
         // 3. Assert using Playwright matchers
         expect(response.status()).toBe(200);
-        const user = await response.tson();
+        const user = await response.json();
         expect(user.username).toBe('Bret');
     });
 });
@@ -56,7 +56,7 @@ describe('Specialized API Strategy (Axios + Vitest)', () => {
         // Ensure API_PROVIDER=axios is set in .env
         driver = DriverFactory.create('api'); 
         await driver.initialize({
-            apiBaseUrl: 'https:/.tsonplaceholder.typicode.com'
+            apiBaseUrl: 'https:/.jsonplaceholder.typicode.com'
         });
     });
 
@@ -66,7 +66,7 @@ describe('Specialized API Strategy (Axios + Vitest)', () => {
         
         // 3. Standard Vitest assertions
         expect(response.status()).toBe(200);
-        const user = await response.tson();
+        const user = await response.json();
         expect(user.id).toBe(1);
     });
 });
@@ -94,6 +94,6 @@ API_PROVIDER=axios npm run test:unit
 
 ## 4. Best Practices
 
-- **Shared Locators**: Use `src/resources/locators/api/common.tson` to store endpoints for both strategies.
+- **Shared Locators**: Use `src/resources/locators/api/common.json` to store endpoints for both strategies.
 - **Environment URLs**: Always rely on `API_BASE_URL` in your `.env`.
-- **Validation**: For both strategies, the `driver` wrapper provides consistent `status()`, .tson()`, and `ok()` methods to keep your code portable.
+- **Validation**: For both strategies, the `driver` wrapper provides consistent `status()`, .json()`, and `ok()` methods to keep your code portable.

@@ -7,9 +7,9 @@ Learn how to write robust and maintainable Web tests using TAFLEX JS.
 We recommend using the Page Object Model to encapsulate page-specific logic and locators. This makes tests readable and easy to maintain.
 
 ### Step 1: Create Locators
-Create a JSON file for your page in `src/resources/locators/web/search.tson`:
+Create a JSON file for your page in `src/resources/locators/web/search.json`:
 
-``.tson
+```json
 {
   "search_input": "input[name='q']",
   "search_button": "input[type='submit'] >> n=1"

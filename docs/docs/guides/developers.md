@@ -27,7 +27,7 @@ When running BDD tests, the framework executes `npx bddgen`. This command:
 2. Scans `tests/bdd/steps/*.ts` and `tests/fixtures.ts`.
 3. Generates executable Playwright spec files in the `.features-gen/` directory.
 
-The `test:bdd` script in `package.tson` automates this process.
+The `test:bdd` script in `package.json` automates this process.
 
 ## Unit Testing
 

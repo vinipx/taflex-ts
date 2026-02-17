@@ -41,7 +41,7 @@ This is my **first Docusaurus document**!
 
 It is also possible to create your sidebar explicitly in `sidebars.ts`:
 
-``.ts title="sidebars.ts"
+```ts title="sidebars.ts"
 export default {
   tutorialSidebar: [
     'intro',

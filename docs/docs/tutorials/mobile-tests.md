@@ -52,7 +52,7 @@ test.describe('Mobile App Login', () => {
 ## 3. Best Practices
 
 - **Selectors**: Use `accessibility id` (ID) or `Xpath` carefully. In TAFLEX JS, store these in `src/resources/locators/mobile/`.
-- **Platform Branching**: If your app logic differs significantly between iOS and Android, create separate locator files (e.g., `login_ios.tson`, `login_android.tson`) and load the correct one at runtime.
+- **Platform Branching**: If your app logic differs significantly between iOS and Android, create separate locator files (e.g., `login_ios.json`, `login_android.json`) and load the correct one at runtime.
 - **Wait Strategies**: Mobile networks and devices can be slow. Use `await element.waitFor()` before critical actions.
 
 ## Execution on Real Devices (Cloud)

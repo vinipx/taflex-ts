@@ -42,7 +42,7 @@ describe('User Profile Contract', () => {
       },
       willRespondWith: {
         status: 200,
-        headers: { 'Content-Type': 'application.tson' },
+        headers: { 'Content-Type': 'application.json' },
         body: {
           username: 'johndoe',
           role: 'editor'

@@ -10,7 +10,7 @@ Let's translate `docs/intro.md` to French.
 
 Modify `docusaurus.config.ts` to add support for the `fr` locale:
 
-``.ts title="docusaurus.config.ts"
+```ts title="docusaurus.config.ts"
 export default {
   i18n: {
     defaultLocale: 'en',
@@ -53,7 +53,7 @@ To navigate seamlessly across languages, add a locale dropdown.
 
 Modify the `docusaurus.config.ts` file:
 
-``.ts title="docusaurus.config.ts"
+```ts title="docusaurus.config.ts"
 export default {
   themeConfig: {
     navbar: {

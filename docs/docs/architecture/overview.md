@@ -140,11 +140,11 @@ sequenceDiagram
     participant File as JSON Files
 
     Test->>LM: load("login")
-    LM->>File: Read global.tson
+    LM->>File: Read global.json
     File-->>LM: Global locators
-    LM->>File: Read web/common.tson
+    LM->>File: Read web/common.json
     File-->>LM: Web locators
-    LM->>File: Read web/login.tson
+    LM->>File: Read web/login.json
     File-->>LM: Page locators
     LM-->>Test: Merged Locator Cache Ready
 
@@ -155,9 +155,9 @@ sequenceDiagram
 
 **Locator Loading Order:**
 
-1. `global.tson` - Common across all modes.
-2. `{mode}/common.tson` - Mode-specific common locators.
-3. `{mode}/{page}.tson` - Page/feature-specific locators.
+1. `global.json` - Common across all modes.
+2. `{mode}/common.json` - Mode-specific common locators.
+3. `{mode}/{page}.json` - Page/feature-specific locators.
 
 ### 3. Configuration Management
 

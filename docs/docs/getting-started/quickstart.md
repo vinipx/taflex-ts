@@ -41,7 +41,7 @@ EXECUTION_MODE=web
 BROWSER=chromium
 HEADLESS=true
 BASE_URL=https://www.google.com
-API_BASE_URL=https:/.tsonplaceholder.typicode.com
+API_BASE_URL=https:/.jsonplaceholder.typicode.com
 
 # Reporting configuration
 REPORTERS=html,allure

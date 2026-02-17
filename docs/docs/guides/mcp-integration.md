@@ -50,7 +50,7 @@ The MCP server exposes the following **Tools** and **Resources** to connected AI
 When a test fails in CI, a developer can point an AI agent to the failure. The agent uses `taflex://reports/latest` to see the error, `get_locator` to check if a selector changed, and `run_test` to verify a potential fix.
 
 ### 2. Test Coverage Audit
-Ask an agent: *"Compare our login spec with the locators in login.tson. Are we missing any elements in our tests?"* The agent can fetch both resources and provide a gap analysis.
+Ask an agent: *"Compare our login spec with the locators in login.json. Are we missing any elements in our tests?"* The agent can fetch both resources and provide a gap analysis.
 
 ### 3. Onboarding
 A new engineer can ask the IDE agent: *"How do I run the API tests for the user service?"* The agent can list the specs, show the configuration, and even run a sample test for them.
@@ -67,9 +67,9 @@ The MCP server is located at: `src/mcp/server.ts` within your project root. You 
 ### 2. Configure Your Client
 
 #### Claude Desktop
-Add the following entry to your `claude_desktop_config.tson` (typically located in `%APPDATA%/Claude/` on Windows or `~/Library/Application Support/Claude/` on macOS):
+Add the following entry to your `claude_desktop_config.json` (typically located in `%APPDATA%/Claude/` on Windows or `~/Library/Application Support/Claude/` on macOS):
 
-``.tson
+```json
 {
   "mcpServers": {
     "taflex": {
@@ -90,9 +90,9 @@ You can add the server via the command line:
 gemini mcp add taflex node /absolute/path/to/taflex-ts/src/mcp/server.ts
 ```
 
-Alternatively, add it manually to your `.gemini/settings.tson`:
+Alternatively, add it manually to your `.gemini/settings.json`:
 
-``.tson
+```json
 {
   "mcpServers": {
     "taflex": {
@@ -115,7 +115,7 @@ If you are using extensions like **Cline** or **Roo Code**:
 1. Open the extension settings or the MCP configuration file (usually found in the extension's global storage).
 2. Add the server definition:
 
-``.tson
+```json
 {
   "mcpServers": {
     "taflex": {
@@ -127,9 +127,9 @@ If you are using extensions like **Cline** or **Roo Code**:
 ```
 
 #### OpenCode
-Add to your `opencode.tson` (global in `~/.config/opencode/` or per-project):
+Add to your `opencode.json` (global in `~/.config/opencode/` or per-project):
 
-``.tson
+```json
 {
   "mcpServers": {
     "taflex": {

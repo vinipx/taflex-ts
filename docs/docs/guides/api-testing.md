@@ -31,7 +31,7 @@ test.describe('User API', () => {
         const response = await driver.get('/users/1');
         expect(response.ok()).toBeTruthy();
         
-        const user = await response.tson();
+        const user = await response.json();
         expect(user.username).toBe('Bret');
     });
 });
@@ -75,7 +75,7 @@ describe('Specialized API', () => {
     it('should fetch data', async () => {
         const response = await driver.get('/endpoint');
         expect(response.status()).toBe(200);
-        const data = await response.tson();
+        const data = await response.json();
         expect(data.id).toBeDefined();
     });
 });

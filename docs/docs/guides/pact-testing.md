@@ -107,7 +107,7 @@ new Verifier(opts).verifyProvider();
 
 ## 🚀 CLI Commands
 
-To keep contract tests isolated, use the following recommended scripts in `package.tson`:
+To keep contract tests isolated, use the following recommended scripts in `package.json`:
 
 | Command | Description |
 | :--- | :--- |
