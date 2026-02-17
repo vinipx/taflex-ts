@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "taflex-local": {
+      "command": "ts-node",
+      "args": [
+        "/Users/Vinicius_Fagundes/Documents/coding/vinipx/taflex-ts/src/mcp/server.ts"
+      ]
+    }
+  }
+}
