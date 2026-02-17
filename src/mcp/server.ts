@@ -74,7 +74,12 @@ class TaflexMcpServer {
     this.server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
       if (request.params.uri === 'taflex://config/current') {
         const config = { ...configManager.config };
-        const secrets: (keyof typeof config)[] = ['CLOUD_KEY', 'RP_API_KEY', 'XRAY_CLIENT_SECRET', 'PACT_BROKER_TOKEN'];
+        const secrets: (keyof typeof config)[] = [
+          'CLOUD_KEY',
+          'RP_API_KEY',
+          'XRAY_CLIENT_SECRET',
+          'PACT_BROKER_TOKEN',
+        ];
         secrets.forEach((key) => {
           if (config[key]) (config as any)[key] = '****';
         });
@@ -174,7 +179,7 @@ class TaflexMcpServer {
             properties: {
               specPath: {
                 type: 'string',
-                description: "Path to the spec file relative to project root",
+                description: 'Path to the spec file relative to project root',
               },
               project: {
                 type: 'string',

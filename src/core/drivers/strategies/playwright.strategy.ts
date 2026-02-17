@@ -1,4 +1,12 @@
-import { chromium, firefox, webkit, Browser, BrowserContext, Page, TestInfo } from '@playwright/test';
+import {
+  chromium,
+  firefox,
+  webkit,
+  Browser,
+  BrowserContext,
+  Page,
+  TestInfo,
+} from '@playwright/test';
 import { AutomationDriver } from '../automation.driver.js';
 import { locatorManager } from '../../locators/locator.manager.js';
 import { PlaywrightElement } from '../../elements/playwright.element.js';

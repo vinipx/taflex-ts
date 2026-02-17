@@ -1,6 +1,6 @@
 import { xrayService } from '../utils/xray.service.js';
 import { configManager } from '../../config/config.manager.js';
-import { FullConfig, FullResult, Reporter, Suite, TestCase, TestResult } from '@playwright/test/reporter';
+import { FullResult, Reporter, TestCase, TestResult } from '@playwright/test/reporter';
 
 /**
  * Custom Playwright reporter that exports test results to Jira Xray.
@@ -46,7 +46,9 @@ class XrayReporter implements Reporter {
 
   private extractXrayKey(test: TestCase): string | null {
     const tagMatch = test.annotations?.find(
-      (a) => a.type === 'tag' && (a.description?.match(/^[A-Z]+-\d+$/) || a.description?.match(/^@?[A-Z]+-\d+$/))
+      (a) =>
+        a.type === 'tag' &&
+        (a.description?.match(/^[A-Z]+-\d+$/) || a.description?.match(/^@?[A-Z]+-\d+$/))
     );
     if (tagMatch && tagMatch.description) return tagMatch.description.replace(/^@/, '');
 

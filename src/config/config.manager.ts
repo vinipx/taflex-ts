@@ -26,7 +26,9 @@ const ConfigSchema = z.object({
     z.string().url().optional()
   ),
   API_PROVIDER: z.enum(['playwright', 'axios']).default('playwright'),
-  TIMEOUT: z.preprocess((val) => (typeof val === 'string' ? parseInt(val, 10) : val), z.number()).default(30000),
+  TIMEOUT: z
+    .preprocess((val) => (typeof val === 'string' ? parseInt(val, 10) : val), z.number())
+    .default(30000),
   REPORTERS: z
     .string()
     .default('html')

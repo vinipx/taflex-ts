@@ -45,6 +45,7 @@ export default [
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
+      'no-undef': 'off',
       'prettier/prettier': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': [

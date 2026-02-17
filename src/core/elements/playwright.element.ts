@@ -5,7 +5,10 @@ import { logger } from '../utils/logger.js';
  * Playwright implementation of the unified element wrapper.
  */
 export class PlaywrightElement {
-  constructor(public readonly locator: Locator, public readonly name: string) {}
+  constructor(
+    public readonly locator: Locator,
+    public readonly name: string
+  ) {}
 
   async click(options: any = {}): Promise<void> {
     logger.info(`Clicking on: ${this.name}`);

@@ -2,7 +2,10 @@
  * WebdriverIO implementation of the unified element wrapper for Mobile automation.
  */
 export class MobileElement {
-  constructor(public readonly element: WebdriverIO.Element, public readonly name: string) {}
+  constructor(
+    public readonly element: WebdriverIO.Element,
+    public readonly name: string
+  ) {}
 
   async click(options: any = {}): Promise<void> {
     await this.element.click(options);

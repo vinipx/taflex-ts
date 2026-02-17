@@ -1,4 +1,4 @@
-import { remote, Browser } from 'webdriverio';
+import { remote } from 'webdriverio';
 import { AutomationDriver } from '../automation.driver.js';
 import { locatorManager } from '../../locators/locator.manager.js';
 import { MobileElement } from '../../elements/mobile.element.js';
@@ -46,7 +46,7 @@ export class WebdriverioMobileStrategy extends AutomationDriver {
     return 'mobile';
   }
 
-  async captureScreenshot(name: string): Promise<string> {
+  async captureScreenshot(_name: string): Promise<string> {
     if (!this.client) throw new Error('Driver not initialized');
     const screenshot = await this.client.takeScreenshot();
     return screenshot;
