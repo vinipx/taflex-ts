@@ -36,3 +36,6 @@ docs/build/
 docs/.env
 docs/.env.local
 sync-taflex.sh
+
+# Gemini CLI
+.gemini/
