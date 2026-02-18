@@ -47,6 +47,14 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    announcementBar: {
+      id: "taflex_ts_v1",
+      content:
+        '⚡ TAFLEX TS — Unified Enterprise Test Automation for Web, API & Mobile. <a target="_blank" rel="noopener noreferrer" href="https://github.com/vinipx/taflex-ts">Star us on GitHub</a>',
+      backgroundColor: "#111111",
+      textColor: "#d4d4d8",
+      isCloseable: true,
+    },
     mermaid: {
       theme: {
         light: "base",
@@ -67,6 +75,92 @@ const config: Config = {
           label: 'Documentation',
         },
         {
+          to: "/docs/getting-started/quickstart",
+          label: "Getting Started",
+          position: "left",
+        },
+        {
+          to: "/docs/architecture/overview",
+          label: "Architecture",
+          position: "left",
+        },
+        {
+          type: "dropdown",
+          label: "Tutorials",
+          position: "left",
+          items: [
+            { label: "Web Testing", to: "/docs/tutorials/web-tests" },
+            { label: "BDD Testing", to: "/docs/tutorials/bdd-tests" },
+            { label: "API Testing", to: "/docs/tutorials/api-tests" },
+            { label: "Mobile Testing", to: "/docs/tutorials/mobile-tests" },
+            { label: "Contract Testing", to: "/docs/tutorials/contract-testing" },
+            { label: "Testing in the Cloud", to: "/docs/tutorials/cloud-execution" },
+          ],
+        },
+        {
+          type: "dropdown",
+          label: "Core Guides",
+          position: "left",
+          items: [
+            { label: "AI-Agent Integration (MCP)", to: "/docs/guides/mcp-integration" },
+            { label: "Reporting Governance", to: "/docs/guides/reporting" },
+            { label: "Pact Testing", to: "/docs/guides/pact-testing" },
+            { label: "Locators", to: "/docs/guides/locators" },
+            { label: "API Testing", to: "/docs/guides/api-testing" },
+            { label: "BDD Testing", to: "/docs/guides/bdd-testing" },
+            { label: "Cloud Testing", to: "/docs/guides/cloud-testing" },
+            { label: "Database", to: "/docs/guides/database" },
+            { label: "Unit Testing", to: "/docs/guides/unit-testing" },
+          ],
+        },
+        {
+          to: "/docs/api/core-interfaces",
+          label: "API Reference",
+          position: "left",
+        },
+        {
+          type: "dropdown",
+          label: "Guides",
+          position: "left",
+          items: [
+            {
+              to: "/docs/guides/qa-engineers",
+              label: "QA Engineers",
+            },
+            {
+              to: "/docs/guides/developers",
+              label: "Developers",
+            },
+            {
+              to: "/docs/guides/managers",
+              label: "Managers",
+            },
+          ],
+        },
+        {
+          type: "dropdown",
+          label: "Resources",
+          position: "left",
+          items: [
+            {
+              to: "/docs/best-practices/test-design",
+              label: "Best Practices",
+            },
+            {
+              to: "/docs/troubleshooting/common-issues",
+              label: "Troubleshooting",
+            },
+            {
+              to: "/docs/contributing/guidelines",
+              label: "Contributing",
+            },
+            {
+              to: "/docs/changelog",
+              label: "Changelog",
+            },
+          ],
+        },
+        {
           href: 'https://github.com/vinipx/taflex-ts',
           label: 'GitHub',
           position: 'right',
@@ -81,7 +175,7 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs',
             },
           ],
         },
