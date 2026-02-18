@@ -11,6 +11,7 @@
     "test:web": "playwright test --project=chromium",
     "test:unit": "vitest run",
     "test:contract": "vitest run tests/contract",
+    "test:mcp": "vitest run tests/unit/mcp.server.spec.ts",
     "mcp": "node dist/mcp/server.js",
     "pact:publish": "pact-broker publish ./pacts --broker-base-url $PACT_BROKER_URL --broker-token $PACT_BROKER_TOKEN",
     "pact:verify": "node ./scripts/pact-verify.js",
